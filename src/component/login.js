@@ -40,8 +40,9 @@ const styles = {
     loginForm: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'end',
-        justifyContent: 'start'
+        alignItems: 'streach',
+        justifyContent: 'start',
+        width: '100%'
     },
     button: {
         
@@ -52,8 +53,7 @@ const styles = {
         padding: '10px 0 10px 0',
     },
     text: {
-        // width: 400,
-        minWidth: 'auto'
+        minWidth: '100%'
     },
     image: {
         height: '100%',
@@ -208,12 +208,11 @@ class Login extends React.Component {
                         </div>
                         <div className={classes.desc}>
                             Kanban as a visual management tool can get work delivered faster and more often. Prioritized tasks are completed first as the team collectively decides what is best using visual cues from the kanban board.
-                        <br />
-                        <span className="">Please login</span>
                         </div>
                         <div className={classes.loginForm}>
 
                             { this.state.showLogin && <form>
+                                <FormHelperText>Enter the Details below to Login</FormHelperText> 
                             <TextField
                                 required    
                                 label="Email"
@@ -289,10 +288,10 @@ class Login extends React.Component {
                                 variant="filled"
                             />
                             <div className={classes.button}>
-                                <Button variant="contained" size="large" type="button" color="primary" onClick={() => this._handleDoRegister()} disabled={!this.state.registerDataIsTrue}>
+                                <Button variant="contained" size="medium" type="button" color="primary" onClick={() => this._handleDoRegister()} disabled={!this.state.registerDataIsTrue}>
                                     Register
                                 </Button>
-                                <Button variant="contained" size="large" type="button" color="primary" onClick={() => this._openRegisterForm()} >
+                                <Button variant="contained" size="medium" type="button" color="primary" onClick={() => this._openRegisterForm()} >
                                     Already a user?
                                 </Button>
                             </div>
