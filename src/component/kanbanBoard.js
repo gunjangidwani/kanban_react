@@ -30,7 +30,9 @@ const styles = {
     paper: {
         padding: 10,
         textAlign: 'center',
-        minHeight: 200
+        minHeight: 200,
+        height: '100%',
+        boxSizing: 'border-box'
       },
     dropPlace: {
           minHeight: 200
@@ -69,7 +71,11 @@ const styles = {
     card: {
         padding: '7px 0',
         margin: '10px 0',
-        boxShadow: '0px 1px 3px 0px #E91E63, 5px 5px 1px 4px rgba(0,0,0,0.14), 0px 0px 9px -3px rgba(0,0,0,0.12)'
+        boxShadow: '1px 1px 3px 0px #E91E63, 2px 5px 7px 4px rgba(0,0,0,0.14), 0px 0px 9px -3px rgba(0,0,0,0.12)',
+        cursor: 'pointer'
+    },
+    cardContent: {
+        padding: 16
     },
     loginMsg: {
         height: '100%',
@@ -231,7 +237,7 @@ class KanbanBoard extends React.Component {
                                         }).map((element, i) => (
                                             <Draggable key={i}  data={JSON.stringify(element)} type="kanban">
                                                 <Card className={classes.card}>
-                                                    <CardContent>
+                                                    <CardContent className={classes.cardContent}>
                                                         <Typography variant="subtitle1" color="primary" gutterBottom>
                                                             {element.task_name}
                                                         </Typography>
