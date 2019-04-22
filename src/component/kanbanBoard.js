@@ -210,7 +210,7 @@ class KanbanBoard extends React.Component {
                     </div>
                 }
                 {
-                    showKanban && 
+                     
                     <div className={classes.heading}> 
                         <Typography variant="h5" color="textPrimary" gutterBottom>
                                Hello {loggedUserData.full_name}, welcome to Kanban Board          
