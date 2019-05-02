@@ -30,12 +30,12 @@ const styles = {
     paper: {
         padding: 10,
         textAlign: 'center',
-        minHeight: 200,
+        height: '100%',
         height: '100%',
         boxSizing: 'border-box'
       },
     dropPlace: {
-          minHeight: 200
+          height: '100%'
       },
     gridContainer: {
           height: '100%',
